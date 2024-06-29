@@ -1,4 +1,4 @@
-### Code covered and Practiced in order as follows
+### Code covered and Practiced as follows
 
 <ol>
     <li>Arrays & Hashing</li>
