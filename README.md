@@ -1,37 +1,22 @@
-# order of practice
+### Code covered and Practiced in order as follows
 
-# Arrays & Hashing
-
-# Two Pointer
-
-# Sliding Window
-
-# Stack
-
-# Binary Search
-
-# Linked List
-
-# Trees
-
-# Heap / Priority Queue
-
-# Backtracking
-
-# Tries
-
-# Graphs
-
-# Advanced Graphs
-
-# 1-D Dynamic Programming
-
-# 2-D Dynamic Programming
-
-# Greedy
-
-# Intervals
-
-# Math & Geometry
-
-# Bit Manipulation
+<ol>
+    <li>Arrays & Hashing</li>
+    <li>Two Pointer</li>
+    <li>Sliding Window</li>
+    <li>Stack</li>
+    <li>Binary Search</li>
+    <li>Linked List</li>
+    <li>Trees</li>
+    <li>Heap / Priority Queue</li>
+    <li>Backtracking</li>
+    <li>Tries</li>
+    <li>Graphs</li>
+    <li>Advanced Graphs</li>
+    <li>1-D Dynamic Programming</li>
+    <li>2-D Dynamic Programming</li>
+    <li>Greedy</li>
+    <li>Intervals</li>
+    <li>Math & Geometry</li>
+    <li>Bit Manipulation</li>
+</ol>
