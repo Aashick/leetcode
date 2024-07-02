@@ -9,7 +9,7 @@ Output: false
 
 */
 
-// * Time O(N) | Space O(N)
+// * Time O(n) | Space O(n)
 var isAnagram = function (s, t) {
   if (s.length !== t.length) return false;
 

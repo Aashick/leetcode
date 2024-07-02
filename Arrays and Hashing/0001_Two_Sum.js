@@ -13,6 +13,7 @@ Input: nums = [3,3], target = 6
 Output: [0,1]
 */
 
+// * Time O(n) | Space O(n)
 var twoSum = function (nums, target) {
   let prevMap = new Map();
 

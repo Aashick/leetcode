@@ -12,12 +12,7 @@ Input: nums = [1,1,1,3,3,4,3,2,4,2]
 Output: true
 */
 
-/**
- * Hash Set - Early Exit
- * Time O(N) | Space O(N)
- * @param {number[]} nums
- * @return {boolean}
- */
+// * Time O(n) | Space O(n)
 var containsDuplicate = function (nums, numsSet = new Set()) {
   for (const num of nums) {
     if (numsSet.has(num)) return true;
