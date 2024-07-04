@@ -28,7 +28,7 @@ function decode(str) {
   let res = [];
   while (i < str.length) {
     let delimeterIndex = str.indexOf("#", i);
-    let length = parseInt(str.substring(i, delimeterIndex));
+    let digitLength = parseInt(str.substring(i, delimeterIndex));
     let start = delimeterIndex + 1;
     let end = start + length;
     res.push(str.substring(start, end));
