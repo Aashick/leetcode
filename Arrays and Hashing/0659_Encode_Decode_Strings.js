@@ -14,10 +14,15 @@ Things to consider:
 3. "4#Java6#script"
 */
 
+//n: Number of strings in the input array strs.
+//L: Total length of all strings combined in strs.
+
+// * Time O(n) | Space O(L)
 function encode(input) {
   return input.map((str) => str.length + "#" + str).join("");
 }
 
+// * Time O(L) | Space O(L)
 function decode(str) {
   let i = 0;
   let res = [];
