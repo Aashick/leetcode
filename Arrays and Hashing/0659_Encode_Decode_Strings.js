@@ -30,7 +30,7 @@ function decode(str) {
     let delimeterIndex = str.indexOf("#", i);
     let digitLength = parseInt(str.substring(i, delimeterIndex));
     let start = delimeterIndex + 1;
-    let end = start + length;
+    let end = start + digitLength;
     res.push(str.substring(start, end));
     i = end;
   }
