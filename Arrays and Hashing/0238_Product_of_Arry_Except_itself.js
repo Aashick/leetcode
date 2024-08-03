@@ -30,3 +30,27 @@ function productExceptSelf(nums) {
 }
 
 productExceptSelf([5, 6, 7, 8]);
+
+
+// With Total Division
+/*
+
+function productExceptSelf(nums) {
+    const n = nums.length;
+    const output = new Array(n);
+    
+    // Compute the product of all elements in the array
+    let product = 1;
+    for (let i = 0; i < n; i++) {
+        product *= nums[i];
+    }
+    
+    // Compute the result for each position
+    for (let i = 0; i < n; i++) {
+        output[i] = product / nums[i];
+    }
+    
+    return output;
+}
+
+*/
