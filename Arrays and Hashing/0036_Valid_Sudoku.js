@@ -31,41 +31,43 @@ Output: false
 */
 
 // * Time O(1) | Space O(1)
-class Solution {
-  /**
-   * @param {character[][]} board
-   * @return {boolean}
-   */
-  isValidSudoku(board) {
-    const rows = new Array(9).fill().map(() => new Set());
-    const cols = new Array(9).fill().map(() => new Set());
-    const square = new Array(9).fill().map(() => new Set());
+function isValidSudoku(board) {
+    // Initialize sets for rows, columns, and sub-grids
+    const rows = Array.from({ length: 9 }, () => new Set());
+    const cols = Array.from({ length: 9 }, () => new Set());
+    const subgrids = Array.from({ length: 9 }, () => new Set());
 
-    for (let r = 0; r < 9; r++) {
-      for (let c = 0; c < 9; c++) {
-        let currentValue = board[r][c];
-        if (currentValue === ".") {
-          continue;
+    // const rows = new Array(9).fill().map(() => new Set());
+    // const cols = new Array(9).fill().map(() => new Set());
+    // const square = new Array(9).fill().map(() => new Set());
+
+    for (let i = 0; i < 9; i++) {
+        for (let j = 0; j < 9; j++) {
+            const num = board[i][j];
+            if (num === '.') {
+                continue; // Skip empty cells
+            }
+
+            // Check if the number is already in the current row
+            if (rows[i].has(num)) {
+                return false;
+            }
+            rows[i].add(num);
+
+            // Check if the number is already in the current column
+            if (cols[j].has(num)) {
+                return false;
+            }
+            cols[j].add(num);
+
+            // Determine the index of the sub-grid (3x3)
+            const subgridIndex = Math.floor(i / 3) * 3 + Math.floor(j / 3);
+            if (subgrids[subgridIndex].has(num)) {
+                return false;
+            }
+            subgrids[subgridIndex].add(num);
         }
-
-        if (
-          rows[r].has(currentValue) ||
-          cols[c].has(currentValue) ||
-          square[this.getSquareIndex(r, c)].has(currentValue)
-        ) {
-          return false;
-        }
-
-        rows[r].add(currentValue);
-        cols[c].add(currentValue);
-        square[this.getSquareIndex(r, c)].add(currentValue);
-      }
     }
 
     return true;
-  }
-
-  getSquareIndex(r, c) {
-    return Math.floor(r / 3) * 3 + Math.floor(c / 3);
-  }
 }
