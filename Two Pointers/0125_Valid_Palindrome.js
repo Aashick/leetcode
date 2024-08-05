@@ -15,17 +15,18 @@ class Solution {
    * @return {boolean}
    */
   isPalindrome(s) {
-    s = s.toLowerCase().replace(/[^a-z0-9]/g, "");
-    let left = 0;
-    let right = s.length - 1;
+        let cleanString = s.replace(/[^a-zA-Z0-9]/g, "").toLowerCase()
 
-    while (left < right) {
-      if (s[left] !== s[right]) return false;
+        let left = 0
+        let right = clean.length - 1
 
-      left++;
-      right--;
+        while (left < right) {
+            if (cleanString[left] !== cleanString[right])
+                return false
+            left++
+            right--
+        }
+
+        return true
     }
-
-    return true;
-  }
 }
