@@ -19,42 +19,34 @@ Output: [[0,0,0]]
 Explanation: The only possible triplet sums up to 0.
 */
 
-// * Time O(n^2) | Space O(log n)
-class Solution {
-  /**
-   * @param {number[]} nums
-   * @return {number[][]}
-   */
-  threeSum(nums) {
-    let res = [];
-    nums.sort((a, b) => a - b);
+// * Time O(n2) | Space O(log n)
+function threeSum(nums) {
+    const res = [];
+    nums.sort((a, b) => a - b); // Sort the array
 
-    for (let i = 0; i < nums.length - 1; i++) {
-      if (nums[i] > 0) break;
+    for (let i = 0; i < nums.length - 2; i++) {
+        // Skip the same element to avoid duplicate triplets
+        if (i > 0 && nums[i] === nums[i - 1]) continue;
 
-      if (nums[i] === nums[i - 1]) continue;
+        let left = i + 1;
+        let right = nums.length - 1;
 
-      let l = i + 1;
-      let r = nums.length - 1;
+        while (left < right) {
+            const sum = nums[i] + nums[left] + nums[right];
 
-      while (l < r) {
-        let threeSum = nums[i] + nums[l] + nums[r];
-
-        if (threeSum > 0) {
-          r--;
-        } else if (threeSum < 0) {
-          l++;
-        } else {
-          res.push([nums[i], nums[l], nums[r]]);
-          l++;
-          r--;
-          while (nums[l] === nums[l - 1] && l < r) {
-            l++;
-          }
+            if (sum === 0) {
+                res.push([nums[i], nums[left], nums[right]]);
+                while (left < right && nums[left] === nums[left + 1]) left++; // Skip duplicates
+                while (left < right && nums[right] === nums[right - 1]) right--; // Skip duplicates
+                left++;
+                right--;
+            } else if (sum < 0) {
+                left++;
+            } else {
+                right--;
+            }
         }
-      }
     }
 
     return res;
-  }
 }
