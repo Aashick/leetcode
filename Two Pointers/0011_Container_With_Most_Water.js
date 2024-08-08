@@ -9,27 +9,24 @@ Output: 4
 */
 
 // * Time O(n) | Space O(1)
-class Solution {
-  /**
-   * @param {number[]} heights
-   * @return {number}
-   */
-  maxArea(heights) {
+function maxArea(height) {
+    let left = 0;
+    let right = height.length - 1;
     let maxArea = 0;
-    let l = 0;
-    let r = heights.length - 1;
 
-    while (l < r) {
-      let currArea = Math.min(heights[l], heights[r]) * (r - l);
-      maxArea = Math.max(currArea, maxArea);
+    while (left < right) {
+        const width = right - left;
+        const minHeight = Math.min(height[left], height[right]);
+        const currentArea = width * minHeight;
+        maxArea = Math.max(maxArea, currentArea);
 
-      if (heights[l] < heights[r]) {
-        l++;
-      } else {
-        r--;
-      }
+        // Move the pointer pointing to the shorter line
+        if (height[left] < height[right]) {
+            left++;
+        } else {
+            right--;
+        }
     }
 
     return maxArea;
-  }
 }
