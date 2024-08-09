@@ -10,21 +10,18 @@ Output: 0
 */
 
 // * Time O(n) | Space O(1)
-class Solution {
-  /**
-   * @param {number} prices
-   * @return {number}
-   */
-  maxProfit(prices) {
-    let res = 0;
-    let low = prices[0];
-
-    for (let p of prices) {
-      if (p < low) low = p;
-
-      res = Math.max(res, p - low);
+var maxProfit = function(prices) {
+    let minPrice = Infinity;
+    let maxProfit = 0;
+    
+    for (let i = 0; i < prices.length; i++) {
+        if (prices[i] < minPrice) {
+            minPrice = prices[i];
+        } else if (prices[i] - minPrice > maxProfit) {
+            maxProfit = prices[i] - minPrice;
+        }
     }
+    
+    return maxProfit;
+};
 
-    return res;
-  }
-}
