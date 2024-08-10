@@ -12,25 +12,25 @@ Output: 1
 // * Time O(n) | Space O(min(m,n))
 // m - size of the character set (typically 256 for ASCII characters)
 // n - length of the string s
-class Solution {
-  /**
-   * @param {string} s
-   * @return {number}
-   */
-  lengthOfLongestSubstring(s) {
-    let charSet = new Set();
-    let l = 0;
-    let res = 0;
+function lengthOfLongestSubstring(s) {
+    let n = s.length;
+    let charSet = new Set(); // To keep track of unique characters
+    let left = 0; // Left pointer of the sliding window
+    let maxLength = 0; // Maximum length of substring without repeating characters
 
-    for (let r = 0; r < s.length; r++) {
-      while (charSet.has(s[r])) {
-        charSet.delete(s[l]);
-        l++;
-      }
-      charSet.add(s[r]);
-      res = Math.max(res, r - l + 1);
+    for (let right = 0; right < n; right++) {
+        // Removes element until the current element not exist in the Set() by moving left to the right
+        while (charSet.has(s[right])) {
+            charSet.delete(s[left]);
+            left++;
+        }
+        
+        // Add the current character to the Set
+        charSet.add(s[right]);
+        
+        // Update the maximum length of the substring
+        maxLength = Math.max(maxLength, right - left + 1);
     }
-
-    return res;
-  }
+    
+    return maxLength;
 }
