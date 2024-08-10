@@ -19,7 +19,11 @@ function lengthOfLongestSubstring(s) {
     let maxLength = 0; // Maximum length of substring without repeating characters
 
     for (let right = 0; right < n; right++) {
-        // Removes element until the current element not exist in the Set() by moving left to the right
+        // Loop continuously removes each element until the current element not exist in the Set() by moving left to the right
+        // abccba // current element second 'c'
+        // first 3 elements will be removed and goes out of loop
+        // then the 2nd c will be added to the set 
+        // now set has only one value - 'c'
         while (charSet.has(s[right])) {
             charSet.delete(s[left]);
             left++;
