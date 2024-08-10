@@ -20,7 +20,7 @@ function lengthOfLongestSubstring(s) {
 
     for (let right = 0; right < n; right++) {
         // Loop continuously removes each element until the current element not exist in the Set() by moving left to the right
-        // abccba // current element second 'c'
+        // abccba // current element is the 2nd 'c'
         // first 3 elements will be removed and goes out of loop
         // then the 2nd c will be added to the set 
         // now set has only one value - 'c'
