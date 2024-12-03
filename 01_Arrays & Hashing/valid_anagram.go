@@ -1,4 +1,6 @@
 func isAnagram(s string, t string) bool {
+    // s := "anagram"
+    // t := "nagaram"
     // If the lengths of the strings differ, they cannot be anagrams
     if len(s) != len(t) {
         return false
