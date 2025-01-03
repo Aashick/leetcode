@@ -16,8 +16,14 @@ func majorityElement(nums []int) int {
 }
 
 
+// The Boyer-Moore Voting Algorithm works by maintaining a count and 
+// a candidate for the majority element
+
 // Time Complexity O(n) 
 // where n is the number of elements in the array.
 
 // Space Complexity O(1)
 // since we are using a fixed amount of extra space.
+
+// 169
+// https://leetcode.com/problems/majority-element/description/
