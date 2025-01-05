@@ -17,8 +17,7 @@ func productExceptSelf(nums []int) []int {
     return output
 }
 
-// sing a two-pass approach that maintains the product of elements to the left and 
-// right of each index without using division
+// two-pass algorithm with prefix and suffix products.
 
 // Time Complexity: O(n) 
 // Space Complexity: O(1)

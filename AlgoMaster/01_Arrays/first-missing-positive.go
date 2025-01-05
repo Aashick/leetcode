@@ -19,6 +19,8 @@ func firstMissingPositive(nums []int) int {
 	return n + 1
 }
 
+// in-place hashing or index mapping technique
+
 // Time Complexity: O(n) 
 // Space Complexity: O(1)
 
