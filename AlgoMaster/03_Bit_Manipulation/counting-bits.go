@@ -13,8 +13,19 @@ func countBits(n int) []int {
 // Time Complexity: O(n)
 // Space Complexity: O(n)
 
-// i >> 1  (Right Shift)
-// i & 1  (Bitwise AND with 1)
+// i >> 1  (Right Shift)    For ex 2 as 0010 -->  [10 >> 1] --> 1 (removed the right most 1 digit that is 0 here)
+// i & 1  (Bitwise AND with 1)  0010 --> (10 & 1) --> 0 (taken the right most 1 digit that is 0 here)
+
+
+/*
+for i := 1; i <= n; i++ {
+        if i % 2 == 1 {
+            result[i] = result[i-1] + 1
+        } else {
+            result[i] = result[i/2]
+        }
+} 
+/
 
 // 338
 // https://leetcode.com/problems/counting-bits/description/
