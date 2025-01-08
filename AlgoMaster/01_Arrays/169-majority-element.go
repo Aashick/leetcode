@@ -20,6 +20,3 @@ func majorityElement(nums []int) int {
 
 // Time Complexity: O(n)
 // Space Complexity: O(1)
-
-// 169
-// https://leetcode.com/problems/majority-element/description/

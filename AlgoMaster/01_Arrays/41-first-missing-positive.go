@@ -24,6 +24,3 @@ func firstMissingPositive(nums []int) int {
 // Time Complexity: O(n) 
 // Space Complexity: O(1)
 
-// 41
-// https://leetcode.com/problems/first-missing-positive/description/
-

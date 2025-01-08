@@ -31,6 +31,3 @@ func reverseWords(s string) string {
 
 // Time Complexity: O(n)
 // Space Complexity: O(n)
-
-// 151
-// https://leetcode.com/problems/reverse-words-in-a-string/description/

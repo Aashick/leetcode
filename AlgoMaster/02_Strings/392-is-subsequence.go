@@ -16,6 +16,3 @@ func isSubsequence(s string, t string) bool {
 
 // Time Complexity: O(m+n)
 // Space Complexity: O(1)
-
-// 392
-// https://leetcode.com/problems/is-subsequence/description/

@@ -27,6 +27,3 @@ for i := 1; i <= n; i++ {
 } 
 /
 
-// 338
-// https://leetcode.com/problems/counting-bits/description/
-

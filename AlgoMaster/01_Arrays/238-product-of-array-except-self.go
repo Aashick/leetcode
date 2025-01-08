@@ -21,6 +21,3 @@ func productExceptSelf(nums []int) []int {
 
 // Time Complexity: O(n) 
 // Space Complexity: O(1)
-
-// 238
-// https://leetcode.com/problems/product-of-array-except-self/description/
